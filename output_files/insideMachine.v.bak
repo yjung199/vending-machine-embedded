@@ -1,0 +1,5 @@
+module insideMachine (a3, a2, a1, a0, K);
+				// A		B		C	D		E	F	  G	H
+	input ps1, ps0, ci1, ci0;
+	input qq3, qq2, qq1, qq0;
+	output [3:0]Q;

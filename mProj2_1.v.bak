@@ -1,0 +1,12 @@
+module mProj2_1 (ps1, ps0, ci1, ci0, q3, q2, q1, q0, Q);
+				// A		B		C	D		E	F	  G	H
+	input ps1, ps0, ci1, ci0, q3, q2, q1, q0;
+	output [3:0]Q;
+	
+	assign Q[0] = (~ps0&~ci0&q0)|(~ps0&ci0&~q0)|(~ps1&ps0&~ci0&q2&~q0)|(~ps1&ps0&~ci0&q3&~q0)|(~ps1&ps0&ci0&q1&q0)|(~ps1&ps0&ci0&q2&q0)|(~ps1&ps0&ci0&q3&q0|~ps1&ps0&ci1&ci0&q0)|(~ps1&ps0&ci1&~ci0&q1&~q0)|(~ps1&~ci1&~ci0&~q3&~q2&~q1&q0)|(~ps1&~ci1&ci0&~q3&~q2&~q1&~q0);
+	assign Q[1] = (~ps0&~ci1&~ci0&q1)|(~ps1&ci0&~q1&q0)|(~ps0&ci0&~q1&q0)|(~ps0&ci0&q1&~q0)|(~ps0&ci1&~ci0&~q1)|(~ps1&~ci1&~ci0&q1&~q0)|(~ps1&ps0&ci0&q2&~q1)|(~ps1&ps0&ci0&q3&~q1)|(~ps1&ps0&ci1&~q1&~q0)|(~ps1&ps0&~ci1&q2&~q1&q0)|(~ps1&ps0&~ci1&q3&~q1&q0)|(~ps1&ps0&ci1&~ci0&q1&q0);
+	assign Q[2] = (~ps0&~ci1&~ci0&q2)|(~ps0&~ci1&q2&~q1)|(~ps0&~ci0&q2&~q1)|(~ps0&~ci1&q2&~q0)|(~ps0&ci1&~ci0&~q2&q1)|(~ps0&ci1&~q2&q1&~q0)|(~ps0&~ci1&ci0&~q2&~q1)|(~ps0&~ci1&ci0&~q2&q1&~q0)|(~ps1&ci1&~ci0&q2&~q1&q0)|(~ps0&ci1&ci0&q2&q1&q0)|(~ps1&ps0&~ci1&q2&q1&q0)|(~ps1&ps0&~ci1&q3&~q2&~q1)|(~ps1&ps0&q3&~q2&~q1&~q0)|(~ps1&ps0&ci1&~ci0&q2&q1)|(~ps1&ps0&ci1&ci0&~q2&q1)|(~ps1&ps0&ci1&ci0&q2&~q1)|(~ps1&ps0&~ci1&~ci0&q3&~q2&~q0);
+	assign Q[3] = (~ps1&~ps0&q3)|(~ps1&q3&q2)|(~ps1&q3&q1&q0)|(~ps1&ci0&q3&q1)|(~ps1&ci1&q3&q0)|(~ps1&ci1&q3&q1)|(~ps1&~ps0&ci1&q2&q1)|(~ps1&~ps0&ci1&ci0&q2)|(~ps1&ci1&ci0&q2&q1)|(~ps1&~ps0&ci0&q2&q1&q0)|(~ps1&~ps0&ci1&ci0&q1&q0);
+	
+	
+	endmodule

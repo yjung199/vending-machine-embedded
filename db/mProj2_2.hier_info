@@ -1,0 +1,264 @@
+|mProj2_2
+outC[0] <= seven_seg_decoder:insOne.out[0]
+outC[1] <= seven_seg_decoder:insOne.out[1]
+outC[2] <= seven_seg_decoder:insOne.out[2]
+outC[3] <= seven_seg_decoder:insOne.out[3]
+outC[4] <= seven_seg_decoder:insOne.out[4]
+outC[5] <= seven_seg_decoder:insOne.out[5]
+outC[6] <= seven_seg_decoder:insOne.out[6]
+clk => inst5.CLK
+clk => inst4.CLK
+clk => inst3.CLK
+clk => inst2.CLK
+ci1 => mProj2_1:inst.COIN[1]
+ci1 => CoinSelect2:Ones.cs1
+ci1 => CoinSelect1:Tens.cs1
+ci0 => mProj2_1:inst.COIN[0]
+ci0 => CoinSelect2:Ones.cs0
+ci0 => CoinSelect1:Tens.cs0
+ps1 => mProj2_1:inst.PRODUCT[1]
+ps1 => ProductSelect1:inst1.ps1
+ps0 => mProj2_1:inst.PRODUCT[0]
+ps0 => ProductSelect1:inst1.ps0
+outD[0] <= seven_seg_decoder:insTen.out[0]
+outD[1] <= seven_seg_decoder:insTen.out[1]
+outD[2] <= seven_seg_decoder:insTen.out[2]
+outD[3] <= seven_seg_decoder:insTen.out[3]
+outD[4] <= seven_seg_decoder:insTen.out[4]
+outD[5] <= seven_seg_decoder:insTen.out[5]
+outD[6] <= seven_seg_decoder:insTen.out[6]
+outO[0] <= seven_seg_decoder:SegOnes.out[0]
+outO[1] <= seven_seg_decoder:SegOnes.out[1]
+outO[2] <= seven_seg_decoder:SegOnes.out[2]
+outO[3] <= seven_seg_decoder:SegOnes.out[3]
+outO[4] <= seven_seg_decoder:SegOnes.out[4]
+outO[5] <= seven_seg_decoder:SegOnes.out[5]
+outO[6] <= seven_seg_decoder:SegOnes.out[6]
+outT[0] <= seven_seg_decoder:SegTens.out[0]
+outT[1] <= seven_seg_decoder:SegTens.out[1]
+outT[2] <= seven_seg_decoder:SegTens.out[2]
+outT[3] <= seven_seg_decoder:SegTens.out[3]
+outT[4] <= seven_seg_decoder:SegTens.out[4]
+outT[5] <= seven_seg_decoder:SegTens.out[5]
+outT[6] <= seven_seg_decoder:SegTens.out[6]
+PsA[0] <= seven_seg_decoder:inst10.out[0]
+PsA[1] <= seven_seg_decoder:inst10.out[1]
+PsA[2] <= seven_seg_decoder:inst10.out[2]
+PsA[3] <= seven_seg_decoder:inst10.out[3]
+PsA[4] <= seven_seg_decoder:inst10.out[4]
+PsA[5] <= seven_seg_decoder:inst10.out[5]
+PsA[6] <= seven_seg_decoder:inst10.out[6]
+
+
+|mProj2_2|seven_seg_decoder:insOne
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mProj2_2|insideMachine:inst6
+a3 => Decoder0.IN0
+a2 => Decoder0.IN1
+a1 => Decoder0.IN2
+a0 => Decoder0.IN3
+K[0] <= K[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+K[1] <= <GND>
+K[2] <= K[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+K[3] <= <GND>
+
+
+|mProj2_2|mProj2_1:inst
+PRODUCT[0] => Equal0.IN1
+PRODUCT[0] => Equal5.IN0
+PRODUCT[0] => Equal6.IN1
+PRODUCT[1] => Equal0.IN0
+PRODUCT[1] => Equal5.IN1
+PRODUCT[1] => Equal6.IN0
+COIN[0] => Equal1.IN1
+COIN[0] => Equal2.IN0
+COIN[0] => Equal3.IN1
+COIN[0] => Equal4.IN1
+COIN[1] => Equal1.IN0
+COIN[1] => Equal2.IN1
+COIN[1] => Equal3.IN0
+COIN[1] => Equal4.IN0
+CURRENT[0] => LessThan0.IN8
+CURRENT[0] => Add0.IN8
+CURRENT[0] => NEXT.DATAA
+CURRENT[0] => LessThan1.IN8
+CURRENT[0] => LessThan2.IN8
+CURRENT[0] => Add2.IN8
+CURRENT[0] => NEXT.DATAA
+CURRENT[0] => LessThan3.IN8
+CURRENT[0] => Add3.IN8
+CURRENT[0] => NEXT.DATAA
+CURRENT[0] => LessThan4.IN8
+CURRENT[0] => NEXT.DATAB
+CURRENT[0] => NEXT[0].DATAB
+CURRENT[0] => NEXT[0].DATAB
+CURRENT[1] => LessThan0.IN7
+CURRENT[1] => Add0.IN7
+CURRENT[1] => NEXT.DATAA
+CURRENT[1] => LessThan1.IN7
+CURRENT[1] => Add1.IN6
+CURRENT[1] => NEXT.DATAA
+CURRENT[1] => LessThan2.IN7
+CURRENT[1] => Add2.IN7
+CURRENT[1] => NEXT.DATAA
+CURRENT[1] => LessThan3.IN7
+CURRENT[1] => Add3.IN7
+CURRENT[1] => NEXT.DATAA
+CURRENT[1] => LessThan4.IN7
+CURRENT[1] => NEXT.DATAB
+CURRENT[1] => NEXT[1].DATAB
+CURRENT[2] => LessThan0.IN6
+CURRENT[2] => Add0.IN6
+CURRENT[2] => NEXT.DATAA
+CURRENT[2] => LessThan1.IN6
+CURRENT[2] => Add1.IN5
+CURRENT[2] => NEXT.DATAA
+CURRENT[2] => LessThan2.IN6
+CURRENT[2] => Add2.IN6
+CURRENT[2] => NEXT.DATAA
+CURRENT[2] => LessThan3.IN6
+CURRENT[2] => Add3.IN6
+CURRENT[2] => NEXT.DATAA
+CURRENT[2] => LessThan4.IN6
+CURRENT[2] => NEXT.DATAB
+CURRENT[2] => NEXT[2].DATAB
+CURRENT[3] => LessThan0.IN5
+CURRENT[3] => Add0.IN5
+CURRENT[3] => NEXT.DATAA
+CURRENT[3] => LessThan1.IN5
+CURRENT[3] => Add1.IN4
+CURRENT[3] => NEXT.DATAA
+CURRENT[3] => LessThan2.IN5
+CURRENT[3] => Add2.IN5
+CURRENT[3] => NEXT.DATAA
+CURRENT[3] => LessThan3.IN5
+CURRENT[3] => Add3.IN5
+CURRENT[3] => NEXT.DATAA
+CURRENT[3] => LessThan4.IN5
+CURRENT[3] => Add4.IN2
+CURRENT[3] => NEXT.DATAA
+CURRENT[3] => NEXT[3].DATAB
+NEXT[0] <= NEXT[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+NEXT[1] <= NEXT[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+NEXT[2] <= NEXT[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+NEXT[3] <= NEXT[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mProj2_2|seven_seg_decoder:insTen
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mProj2_2|insideMachine2:inst7
+a3 => Mux0.IN16
+a3 => Mux1.IN16
+a3 => Mux2.IN16
+a3 => Mux3.IN16
+a2 => Mux0.IN17
+a2 => Mux1.IN17
+a2 => Mux2.IN17
+a2 => Mux3.IN17
+a1 => Mux0.IN18
+a1 => Mux1.IN18
+a1 => Mux2.IN18
+a1 => Mux3.IN18
+a0 => Mux0.IN19
+a0 => Mux1.IN19
+a0 => Mux2.IN19
+a0 => Mux3.IN19
+J[0] <= J[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+J[1] <= J[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+J[2] <= J[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+J[3] <= <GND>
+
+
+|mProj2_2|seven_seg_decoder:SegOnes
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mProj2_2|CoinSelect2:Ones
+cs1 => Decoder0.IN0
+cs0 => Decoder0.IN1
+outB[0] <= outB.DB_MAX_OUTPUT_PORT_TYPE
+outB[1] <= <GND>
+outB[2] <= outB.DB_MAX_OUTPUT_PORT_TYPE
+outB[3] <= <GND>
+
+
+|mProj2_2|seven_seg_decoder:SegTens
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mProj2_2|CoinSelect1:Tens
+cs1 => Decoder0.IN0
+cs0 => Decoder0.IN1
+outA[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+outA[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+outA[2] <= <GND>
+outA[3] <= <GND>
+
+
+|mProj2_2|seven_seg_decoder:inst10
+Z => Decoder0.IN0
+Y => Decoder0.IN1
+X => Decoder0.IN2
+W => Decoder0.IN3
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mProj2_2|ProductSelect1:inst1
+ps1 => out[1].DATAIN
+ps0 => out[0].DATAIN
+out[0] <= ps0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= ps1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= <GND>
+out[3] <= <GND>
+
+
